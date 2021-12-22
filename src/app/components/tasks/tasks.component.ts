@@ -12,6 +12,12 @@ export class TasksComponent implements OnInit {
   constructor(private taskService: TaskService) { }
 
   ngOnInit(): void {
+
+    //this.tasks is an empty array that we set it above as a property
+
+    //we usually do not use it like this and need to use observables because we're
+    //usually dealing with async data
+
     this.tasks = this.taskService.getTasks()
   }
 
