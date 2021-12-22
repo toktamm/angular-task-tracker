@@ -10,10 +10,11 @@ export class TaskService {
 
   constructor() { }
 
-  //instead of Task as a type it's gonna be Task as an Observable
+  //instead of Task as a type, it's gonna be Task as an Observable
 
   getTasks(): Observable<Task[]> {
-    return TASKS;
+    const tasks = of(TASKS);
+    return tasks;
   }
 
 }
