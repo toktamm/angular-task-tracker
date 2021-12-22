@@ -9,7 +9,7 @@ export class TaskService {
 
   constructor() { }
 
-  getTasks() {
+  getTasks(): Task[] {
     return TASKS;
   }
 
