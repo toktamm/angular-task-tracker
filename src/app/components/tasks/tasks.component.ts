@@ -18,7 +18,9 @@ export class TasksComponent implements OnInit {
     //we usually do not use it like this and need to use observables because we're
     //usually dealing with async data
 
-    this.tasks = this.taskService.getTasks()
+    //we subscribe to an observable so we can constantly watch it
+
+    this.taskService.getTasks().subscribe((tasks) => (this.tasks = tasks));
   }
 
 }
